@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:welcome_product_ui/product_1.dart';
+import 'package:welcome_product_ui/pages/product_page.dart';
 
 void main() => runApp(MyApp());
 
