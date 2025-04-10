@@ -19,15 +19,38 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentIndex,
+        onTap: (int index) {
+          if (index == 1) {
+            setState(() {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CartPage(),
+                ),
+              );
+              currentIndex = index;
+            });
+          }
+        },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.card_travel), label: "Cart"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.favorite), label: "Favorite"),
+            icon: Icon(Icons.home_filled),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.card_travel),
+            label: "Cart",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: "Favorite",
+          ),
         ],
       ),
       backgroundColor: Colors.white,

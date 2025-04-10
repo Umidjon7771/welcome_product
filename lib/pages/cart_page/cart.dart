@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:welcome_product_ui/pages/cart_page/empty_cart.dart';
+import 'package:welcome_product_ui/pages/welcome_page.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
@@ -91,6 +92,16 @@ class _CartPageState extends State<CartPage> {
               text: "T-Shirt",
               price: 1200,
             ),
+            SizedBox(
+              height: 80,
+            ),
+            MyButton(
+              text: "Check Out",
+              onTap: () {},
+            ),
+            SizedBox(
+              height: 100,
+            ),
           ],
         ),
       ),
@@ -153,11 +164,7 @@ class _EveryItemState extends State<EveryItem> {
                     IconButton(
                       onPressed: () {
                         setState(() {
-                          if (countA > 1) {
-                            countA--;
-                          } else if (countA < 1) {
-                            countA = 1;
-                          }
+                          showCustomDialogDelete(context);
                         });
                       },
                       icon: Icon(CupertinoIcons.delete),
@@ -279,7 +286,96 @@ void showCustomDialog(BuildContext context) {
                     ),
                   ),
                 ],
-              )
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
+}
+
+void showCustomDialogDelete(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return Dialog(
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          height: 200,
+          width: 400,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                "Delete Chair ...",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "Are you sure you want to delete Chair\nitems from your cart?",
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  MaterialButton(
+                    height: 50,
+                    minWidth: 100,
+                    color: Colors.grey.shade100,
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                    child: Text(
+                      "  Cancel  ",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 40,
+                  ),
+                  MaterialButton(
+                    height: 50,
+                    minWidth: 100,
+                    color: Colors.blue.shade900,
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => CartPage()));
+                    },
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                    child: Text(
+                      "  Delete  ",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
