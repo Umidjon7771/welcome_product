@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:welcome_product_ui/pages/detail_page.dart';
+import 'package:welcome_product_ui/pages/product_page/detail_page.dart';
 
 class Product1 extends StatefulWidget {
   const Product1({super.key});

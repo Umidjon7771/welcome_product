@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:welcome_product_ui/pages/product_page.dart';
+import 'package:welcome_product_ui/pages/cart_page/cart.dart';
+import 'package:welcome_product_ui/pages/cart_page/empty_cart.dart';
+import 'package:welcome_product_ui/pages/product_page/product_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -73,6 +75,10 @@ class _HomeState extends State<Home> {
               Spacer(),
               MyButton(
                 text: "Explore",
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Product1()));
+                },
               ),
             ],
           ),
@@ -83,10 +89,12 @@ class _HomeState extends State<Home> {
 }
 
 class MyButton extends StatelessWidget {
+  final void Function()? onTap;
   final String text;
   const MyButton({
     super.key,
     required this.text,
+    this.onTap,
   });
 
   @override
@@ -98,11 +106,7 @@ class MyButton extends StatelessWidget {
       height: 80,
       minWidth: 400,
       color: Colors.blue.shade800,
-      onPressed: () {
-        /// Product 1 ga otishi kerak
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Product1()));
-      },
+      onPressed: onTap,
       child: Text(
         text,
         textAlign: TextAlign.center,

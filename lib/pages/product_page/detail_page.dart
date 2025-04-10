@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:welcome_product_ui/pages/comments_page.dart';
+import 'package:welcome_product_ui/pages/cart_page/cart.dart';
+import 'package:welcome_product_ui/pages/product_page/comments_page.dart';
 import 'package:welcome_product_ui/pages/welcome_page.dart';
 
 class DetailPage extends StatefulWidget {
@@ -95,7 +96,17 @@ class _DetailPageState extends State<DetailPage> {
             SizedBox(
               height: 30,
             ),
-            MyButton(text: "Add to Card"),
+            MyButton(
+              text: "Add to Card",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CartPage(),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
