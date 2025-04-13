@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:welcome_product_ui/pages/cart_page/cart.dart';
-import 'package:welcome_product_ui/pages/cart_page/empty_cart.dart';
+import 'package:welcome_product_ui/pages/forget_password/forget_password.dart';
+import 'package:welcome_product_ui/pages/forget_password/send.dart';
 import 'package:welcome_product_ui/pages/product_page/product_page.dart';
+import 'package:welcome_product_ui/pages/sign_in_sign_up/cussess.dart';
+import 'package:welcome_product_ui/pages/sign_in_sign_up/password/new_password.dart';
+import 'package:welcome_product_ui/pages/sign_in_sign_up/password/new_password_ui.dart';
+import 'package:welcome_product_ui/pages/sign_in_sign_up/sign_in.dart';
+import 'package:welcome_product_ui/pages/sign_in_sign_up/sign_up.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -16,7 +21,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: const Home(),
     );
   }
 }
@@ -47,7 +52,7 @@ class _HomeState extends State<Home> {
                   fontSize: 50,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 80,
               ),
               Text(
@@ -60,7 +65,7 @@ class _HomeState extends State<Home> {
                   fontSize: 26,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
@@ -72,12 +77,12 @@ class _HomeState extends State<Home> {
                   fontSize: 14,
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               MyButton(
                 text: "Explore",
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Product1()));
+                      MaterialPageRoute(builder: (context) => const SignIn()));
                 },
               ),
             ],
@@ -110,7 +115,7 @@ class MyButton extends StatelessWidget {
       child: Text(
         text,
         textAlign: TextAlign.center,
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.white,
           fontSize: 16,
           fontWeight: FontWeight.bold,

@@ -15,11 +15,11 @@ class _Product1State extends State<Product1> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         toolbarHeight: 100,
-        title: Text(
+        title: const Text(
           "Product List",
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
         ),
-        actions: [
+        actions: const [
           Icon(
             Icons.search,
             color: Colors.black,
@@ -34,10 +34,10 @@ class _Product1State extends State<Product1> {
         child: Center(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   MyText(
@@ -54,7 +54,7 @@ class _Product1State extends State<Product1> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Wrap(
@@ -69,7 +69,7 @@ class _Product1State extends State<Product1> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DetailPage(
+                          builder: (context) => const DetailPage(
                             name: "Orange Chair",
                             price: '879.0',
                             imageUrl:
@@ -79,7 +79,7 @@ class _Product1State extends State<Product1> {
                       );
                     },
                   ),
-                  Spacer(),
+                  const Spacer(),
                   MyGridTile(
                     image:
                         "https://png.pngtree.com/png-vector/20191213/ourlarge/pngtree-blue-bike-illustration-vector-on-white-background-png-image_2070059.jpg",
@@ -88,7 +88,7 @@ class _Product1State extends State<Product1> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DetailPage(
+                          builder: (context) => const DetailPage(
                             name: "Bike",
                             price: r'$2800.00',
                             imageUrl:
@@ -106,7 +106,7 @@ class _Product1State extends State<Product1> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DetailPage(
+                          builder: (context) => const DetailPage(
                             name: "Refrigator",
                             price: r'$4200.00',
                             imageUrl:
@@ -116,7 +116,7 @@ class _Product1State extends State<Product1> {
                       );
                     },
                   ),
-                  Spacer(),
+                  const Spacer(),
                   MyGridTile(
                     image:
                         "https://media.istockphoto.com/id/952477594/vector/cartoon-black-hd-tv-isolated-on-white.jpg?s=612x612&w=0&k=20&c=1nVkxTNp73OwPGQZsm-WuFo6-PGQ31zP22MN6dsOlhM=",
@@ -125,7 +125,7 @@ class _Product1State extends State<Product1> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DetailPage(
+                          builder: (context) => const DetailPage(
                             name: "TV",
                             price: r'$3000.00',
                             imageUrl:
@@ -143,7 +143,7 @@ class _Product1State extends State<Product1> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DetailPage(
+                          builder: (context) => const DetailPage(
                             name: "Phone",
                             price: r'$1200.00',
                             imageUrl:
@@ -162,7 +162,7 @@ class _Product1State extends State<Product1> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DetailPage(
+                          builder: (context) => const DetailPage(
                             name: "T-Shirt",
                             price: r'$200.0',
                             imageUrl:
@@ -190,7 +190,7 @@ class MyText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(fontSize: 18),
+      style: const TextStyle(fontSize: 18),
     );
   }
 }
@@ -223,10 +223,10 @@ class MyGridTile extends StatelessWidget {
                 children: [
                   Text(
                     price,
-                    style: TextStyle(fontSize: 18),
+                    style: const TextStyle(fontSize: 18),
                   ),
-                  Spacer(),
-                  Text(
+                  const Spacer(),
+                  const Text(
                     "•••",
                     style: TextStyle(fontSize: 16),
                   ),

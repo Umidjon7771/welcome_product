@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:welcome_product_ui/pages/cart_page/cart.dart';
 import 'package:welcome_product_ui/pages/product_page/comments_page.dart';
-import 'package:welcome_product_ui/pages/welcome_page.dart';
+import 'package:welcome_product_ui/pages/main.dart';
 
 class DetailPage extends StatefulWidget {
   final String name;
@@ -31,14 +31,14 @@ class _DetailPageState extends State<DetailPage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => CartPage(),
+                  builder: (context) => const CartPage(),
                 ),
               );
               currentIndex = index;
             });
           }
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_filled),
             label: "Home",
@@ -57,7 +57,7 @@ class _DetailPageState extends State<DetailPage> {
       appBar: AppBar(
         title: Text(
           widget.name,
-          style: TextStyle(fontSize: 36),
+          style: const TextStyle(fontSize: 36),
         ),
       ),
       body: Center(
@@ -67,38 +67,38 @@ class _DetailPageState extends State<DetailPage> {
           children: [
             Text(
               "                                                  ${widget.price}\$",
-              style: TextStyle(fontSize: 22),
+              style: const TextStyle(fontSize: 22),
             ),
             Image.network(
               widget.imageUrl,
               height: 400,
               fit: BoxFit.cover,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
               "Furniture",
               style: TextStyle(fontSize: 16, color: Colors.grey),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 for (int i = 1; i <= 5; i++)
-                  Icon(
+                  const Icon(
                     Icons.star,
                     color: Colors.yellow,
                   ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 SelectableText.rich(
                   TextSpan(
                     text: '124 review',
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.blue,
                       decoration: TextDecoration.underline,
                     ),
@@ -108,7 +108,7 @@ class _DetailPageState extends State<DetailPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Product3(),
+                            builder: (context) => const Product3(),
                           ),
                         );
                       },
@@ -116,7 +116,7 @@ class _DetailPageState extends State<DetailPage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             MyButton(
@@ -125,7 +125,7 @@ class _DetailPageState extends State<DetailPage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => CartPage(),
+                    builder: (context) => const CartPage(),
                   ),
                 );
               },

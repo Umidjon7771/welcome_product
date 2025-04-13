@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_product_ui/pages/product_page/product_page.dart';
-import 'package:welcome_product_ui/pages/welcome_page.dart';
+import 'package:welcome_product_ui/pages/main.dart';
 
 class EmptyCart extends StatelessWidget {
   const EmptyCart({super.key});
@@ -13,22 +13,22 @@ class EmptyCart extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(
+            const Icon(
               Icons.shopping_cart_sharp,
               size: 50,
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Text(
+            const Text(
               "Your cart is empty",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             RichText(
-              text: TextSpan(
+              text: const TextSpan(
                 text: "Looking for ideas?",
                 style: TextStyle(
                   fontSize: 18,
@@ -36,7 +36,7 @@ class EmptyCart extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             MyButton(
@@ -45,7 +45,7 @@ class EmptyCart extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Product1(),
+                    builder: (context) => const Product1(),
                   ),
                 );
               },
