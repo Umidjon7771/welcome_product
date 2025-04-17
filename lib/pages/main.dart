@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:welcome_product_ui/pages/forget_password/forget_password.dart';
-import 'package:welcome_product_ui/pages/forget_password/send.dart';
-import 'package:welcome_product_ui/pages/product_page/product_page.dart';
-import 'package:welcome_product_ui/pages/sign_in_sign_up/cussess.dart';
-import 'package:welcome_product_ui/pages/sign_in_sign_up/password/new_password.dart';
-import 'package:welcome_product_ui/pages/sign_in_sign_up/password/new_password_ui.dart';
 import 'package:welcome_product_ui/pages/sign_in_sign_up/sign_in.dart';
-import 'package:welcome_product_ui/pages/sign_in_sign_up/sign_up.dart';
 
 void main() => runApp(const MyApp());
 
@@ -17,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "Product App",
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),

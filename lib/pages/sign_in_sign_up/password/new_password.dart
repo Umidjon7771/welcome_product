@@ -77,6 +77,11 @@ class _NewPasswordState extends State<NewPassword> {
                           content: Text("Saved"),
                         ),
                       );
+
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => NewPasswordUI()));
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
@@ -91,9 +96,6 @@ class _NewPasswordState extends State<NewPassword> {
                       ),
                     );
                   }
-
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => NewPasswordUI()));
                 },
               ),
             ),

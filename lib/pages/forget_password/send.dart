@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_product_ui/pages/main.dart';
+import 'package:welcome_product_ui/pages/sign_in_sign_up/password/new_password.dart';
+import 'package:welcome_product_ui/pages/sign_in_sign_up/password/new_password_ui.dart';
 
 class IntroctionsSend extends StatefulWidget {
   const IntroctionsSend({super.key});
@@ -55,7 +57,10 @@ class _IntroctionsSendState extends State<IntroctionsSend> {
                 ),
                 MyButton(
                   text: "Go to Email",
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => NewPassword()));
+                  },
                 ),
               ],
             ),
