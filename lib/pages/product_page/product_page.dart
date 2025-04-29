@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_product_ui/core/themes/app_colors.dart';
 import 'package:welcome_product_ui/pages/product_page/detail_page.dart';
 
 class Product1 extends StatefulWidget {
@@ -22,7 +23,7 @@ class _Product1State extends State<Product1> {
         actions: const [
           Icon(
             Icons.search,
-            color: Colors.black,
+            color: AppColors.black,
             size: 35,
           ),
           SizedBox(
@@ -215,7 +216,7 @@ class MyGridTile extends StatelessWidget {
       child: GestureDetector(
         onTap: onTap,
         child: Card(
-          color: Colors.white,
+          color: AppColors.white,
           child: GridTile(
             footer: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),

@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:welcome_product_ui/core/themes/app_colors.dart';
 import 'package:welcome_product_ui/pages/cart_page/cart.dart';
 import 'package:welcome_product_ui/pages/product_page/comments_page.dart';
 import 'package:welcome_product_ui/pages/main.dart';
@@ -53,7 +54,7 @@ class _DetailPageState extends State<DetailPage> {
           ),
         ],
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
         title: Text(
           widget.name,
@@ -79,7 +80,7 @@ class _DetailPageState extends State<DetailPage> {
             ),
             const Text(
               "Furniture",
-              style: TextStyle(fontSize: 16, color: Colors.grey),
+              style: TextStyle(fontSize: 16, color: AppColors.grey100),
             ),
             const SizedBox(
               height: 10,
@@ -90,7 +91,7 @@ class _DetailPageState extends State<DetailPage> {
                 for (int i = 1; i <= 5; i++)
                   const Icon(
                     Icons.star,
-                    color: Colors.yellow,
+                    color: AppColors.yellow,
                   ),
                 const SizedBox(
                   width: 10,
@@ -99,7 +100,7 @@ class _DetailPageState extends State<DetailPage> {
                   TextSpan(
                     text: '124 review',
                     style: const TextStyle(
-                      color: Colors.blue,
+                      color: AppColors.blue,
                       decoration: TextDecoration.underline,
                     ),
                     mouseCursor: SystemMouseCursors.click,

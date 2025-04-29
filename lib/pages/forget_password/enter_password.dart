@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_product_ui/core/themes/app_colors.dart';
 import 'package:welcome_product_ui/pages/main.dart';
 
 class ForgetPassword extends StatelessWidget {
@@ -21,7 +22,7 @@ class ForgetPassword extends StatelessWidget {
                   "Check Password",
                   style: TextStyle(
                     fontSize: 40,
-                    color: Colors.deepPurpleAccent.shade700,
+                    color: AppColors.deepPurple,
                   ),
                 ),
                 SizedBox(
@@ -32,7 +33,7 @@ class ForgetPassword extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 18,
-                    color: Colors.deepPurpleAccent.shade700,
+                    color: AppColors.deepPurple,
                   ),
                 ),
                 SizedBox(

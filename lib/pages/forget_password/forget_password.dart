@@ -1,5 +1,6 @@
 import 'package:email_otp/email_otp.dart';
 import 'package:flutter/material.dart';
+import 'package:welcome_product_ui/core/themes/app_colors.dart';
 import 'package:welcome_product_ui/pages/forget_password/send.dart';
 import 'package:welcome_product_ui/pages/main.dart';
 
@@ -17,7 +18,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber[100],
+      backgroundColor: AppColors.amber,
       body: Center(
         child: Center(
           child: Padding(
@@ -28,10 +29,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               children: [
                 Text(
                   "Password Reset",
-                  style: TextStyle(
-                    fontSize: 40,
-                    color: Colors.deepPurpleAccent.shade700,
-                  ),
+                  style: TextStyle(fontSize: 40, color: AppColors.deepPurple),
                 ),
                 SizedBox(
                   height: 20,
@@ -41,7 +39,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 18,
-                    color: Colors.deepPurpleAccent.shade700,
+                    color: AppColors.deepPurple,
                   ),
                 ),
                 SizedBox(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_product_ui/core/themes/app_colors.dart';
 import 'package:welcome_product_ui/pages/product_page/product_page.dart';
 import 'package:welcome_product_ui/pages/main.dart';
 
@@ -28,11 +29,11 @@ class EmptyCart extends StatelessWidget {
               height: 20,
             ),
             RichText(
-              text: const TextSpan(
+              text: TextSpan(
                 text: "Looking for ideas?",
                 style: TextStyle(
                   fontSize: 18,
-                  color: Colors.grey,
+                  color: AppColors.grey100,
                 ),
               ),
             ),

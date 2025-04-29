@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:welcome_product_ui/core/themes/app_colors.dart';
 import 'package:welcome_product_ui/pages/cart_page/empty_cart.dart';
 import 'package:welcome_product_ui/pages/main.dart';
 
@@ -14,9 +15,9 @@ class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.white,
         toolbarHeight: 40,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
@@ -214,7 +215,7 @@ void showCustomDialog(BuildContext context) {
       return Dialog(
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: AppColors.white,
             borderRadius: BorderRadius.circular(15),
           ),
           height: 200,
@@ -248,7 +249,7 @@ void showCustomDialog(BuildContext context) {
                   MaterialButton(
                     height: 50,
                     minWidth: 100,
-                    color: Colors.grey.shade100,
+                    color: AppColors.grey100,
                     onPressed: () {
                       Navigator.pop(context);
                     },
@@ -268,7 +269,7 @@ void showCustomDialog(BuildContext context) {
                   MaterialButton(
                     height: 50,
                     minWidth: 100,
-                    color: Colors.blue.shade900,
+                    color: AppColors.blue900,
                     onPressed: () {
                       Navigator.push(
                           context,
@@ -283,7 +284,7 @@ void showCustomDialog(BuildContext context) {
                     child: const Text(
                       "  Empty Cart  ",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -305,7 +306,7 @@ void showCustomDialogDelete(BuildContext context) {
       return Dialog(
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: AppColors.white,
             borderRadius: BorderRadius.circular(15),
           ),
           height: 200,
@@ -339,7 +340,7 @@ void showCustomDialogDelete(BuildContext context) {
                   MaterialButton(
                     height: 50,
                     minWidth: 100,
-                    color: Colors.grey.shade100,
+                    color: AppColors.grey100,
                     onPressed: () {
                       Navigator.pop(context);
                     },
@@ -359,7 +360,7 @@ void showCustomDialogDelete(BuildContext context) {
                   MaterialButton(
                     height: 50,
                     minWidth: 100,
-                    color: Colors.blue.shade900,
+                    color: AppColors.blue900,
                     onPressed: () {
                       Navigator.push(
                           context,
@@ -374,7 +375,7 @@ void showCustomDialogDelete(BuildContext context) {
                     child: const Text(
                       "  Delete  ",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

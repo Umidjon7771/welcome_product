@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_product_ui/core/themes/app_colors.dart';
 import 'package:welcome_product_ui/pages/sign_in_sign_up/password/new_password.dart';
 import 'package:welcome_product_ui/pages/sign_in_sign_up/sign_in.dart';
 import 'package:welcome_product_ui/pages/main.dart';
@@ -9,7 +10,7 @@ class CongratulationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber[100],
+      backgroundColor: AppColors.amber,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -19,7 +20,7 @@ class CongratulationPage extends StatelessWidget {
               "Congratulations",
               style: TextStyle(
                 fontSize: 40,
-                color: Colors.deepPurpleAccent.shade700,
+                color: AppColors.deepPurple,
               ),
             ),
             SizedBox(

@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:welcome_product_ui/core/themes/app_colors.dart';
 import 'package:welcome_product_ui/pages/forget_password/forget_password.dart';
 import 'package:welcome_product_ui/pages/product_page/product_page.dart';
 import 'package:welcome_product_ui/pages/sign_in_sign_up/for_user.dart';
@@ -20,7 +21,7 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber[100],
+      backgroundColor: AppColors.amber,
       body: Padding(
         padding: const EdgeInsets.only(top: 180, left: 40, right: 40),
         child: Column(
@@ -33,7 +34,7 @@ class _SignInState extends State<SignIn> {
               style: TextStyle(
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
-                color: Colors.deepPurpleAccent.shade700,
+                color: AppColors.deepPurple,
               ),
             ),
             SizedBox(
@@ -131,7 +132,7 @@ class _SignInState extends State<SignIn> {
                 TextSpan(
                   text: "Forgot password",
                   style: TextStyle(
-                    color: Colors.deepPurpleAccent.shade700,
+                    color: AppColors.deepPurple,
                     fontWeight: FontWeight.bold,
                   ),
                   recognizer: TapGestureRecognizer()
@@ -173,10 +174,10 @@ class MySecondButton extends StatelessWidget {
           width: 395,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.amber[100],
+            color: AppColors.amber,
             border: Border.all(
               width: 2,
-              color: Colors.deepPurpleAccent,
+              color: AppColors.deepPurple,
             ),
           ),
           child: Center(
@@ -184,7 +185,7 @@ class MySecondButton extends StatelessWidget {
               text,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                color: Colors.deepPurpleAccent,
+                color: AppColors.deepPurple,
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),

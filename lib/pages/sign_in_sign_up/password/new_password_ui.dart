@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_product_ui/core/themes/app_colors.dart';
 import 'package:welcome_product_ui/pages/main.dart';
 import 'package:welcome_product_ui/pages/sign_in_sign_up/sign_in.dart';
 
@@ -29,7 +30,7 @@ class _NewPasswordUIState extends State<NewPasswordUI> {
                   "New Password",
                   style: TextStyle(
                     fontSize: 40,
-                    color: Colors.deepPurpleAccent.shade700,
+                    color: AppColors.deepPurple,
                   ),
                 ),
                 SizedBox(
@@ -40,7 +41,7 @@ class _NewPasswordUIState extends State<NewPasswordUI> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 18,
-                    color: Colors.deepPurpleAccent.shade700,
+                    color: AppColors.deepPurple,
                   ),
                 ),
                 SizedBox(

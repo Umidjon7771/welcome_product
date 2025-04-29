@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_product_ui/core/themes/app_colors.dart';
 
 class Product3 extends StatelessWidget {
   const Product3({super.key});
@@ -84,7 +85,7 @@ class MyColumn extends StatelessWidget {
               for (int i = 1; i <= 5; i++)
                 Icon(
                   Icons.star,
-                  color: Colors.yellow,
+                  color: AppColors.yellow,
                 ),
             ],
           ),
@@ -95,15 +96,10 @@ class MyColumn extends StatelessWidget {
         ),
         Text(
           "Size and color blends well with our mid century home\nSturdy and comfortable. Very happy with purchase!.",
-          style: TextStyle(
-            color: Colors.grey,
-          ),
+          style: TextStyle(color: AppColors.grey100),
         ),
         Divider(),
       ],
     );
   }
 }
-
-// done
-// done

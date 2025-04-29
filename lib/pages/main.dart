@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:welcome_product_ui/core/themes/app_colors.dart';
 import 'package:welcome_product_ui/pages/sign_in_sign_up/sign_in.dart';
 
 void main() => runApp(const MyApp());
@@ -10,6 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.light,
       title: "Product App",
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(),
@@ -40,7 +43,7 @@ class _HomeState extends State<Home> {
               Text(
                 "Shopin",
                 style: TextStyle(
-                  color: Colors.blue.shade900,
+                  color: AppColors.blue,
                   letterSpacing: 20,
                   fontWeight: FontWeight.bold,
                   fontSize: 50,
@@ -52,7 +55,7 @@ class _HomeState extends State<Home> {
               Text(
                 "Amazing Shopping",
                 style: TextStyle(
-                  color: Colors.blue.shade700,
+                  color: AppColors.blue,
                   // letterSpacing: 20,
                   wordSpacing: 10,
                   fontWeight: FontWeight.bold,
@@ -66,7 +69,7 @@ class _HomeState extends State<Home> {
                 "Experience a new way\nof shopping.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.blue.shade700,
+                  color: AppColors.blue,
                   fontWeight: FontWeight.bold,
                   fontSize: 14,
                 ),
@@ -104,13 +107,13 @@ class MyButton extends StatelessWidget {
       ),
       height: 80,
       minWidth: 400,
-      color: Colors.blue.shade800,
+      color: AppColors.blue,
       onPressed: onTap,
       child: Text(
         text,
         textAlign: TextAlign.center,
         style: const TextStyle(
-          color: Colors.white,
+          color: AppColors.white,
           fontSize: 16,
           fontWeight: FontWeight.bold,
         ),

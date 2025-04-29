@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:welcome_product_ui/core/themes/app_colors.dart';
 import 'package:welcome_product_ui/pages/product_page/product_page.dart';
 import 'package:welcome_product_ui/pages/sign_in_sign_up/cussess.dart';
 import 'package:welcome_product_ui/pages/main.dart';
@@ -21,7 +22,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber[100],
+      backgroundColor: AppColors.amber,
       body: Padding(
         padding: const EdgeInsets.only(top: 180, left: 40, right: 40),
         child: Column(
@@ -34,7 +35,7 @@ class _SignUpState extends State<SignUp> {
               style: TextStyle(
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
-                color: Colors.deepPurpleAccent.shade700,
+                color: AppColors.deepPurple,
               ),
             ),
             SizedBox(
