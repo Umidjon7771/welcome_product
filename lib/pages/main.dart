@@ -124,4 +124,4 @@ class MyButton extends StatelessWidget {
 
 
 
-// masalan mana shu yrda men ozgartirish kiritdim!!!
+// masalan mana shu yrda men ozgartirish kiritdim!!! dwjdwuhduwhudhuwhduhwduhwudhwuhduwhuhd
